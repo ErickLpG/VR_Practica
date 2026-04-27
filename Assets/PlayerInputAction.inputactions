@@ -68,6 +68,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e1eb9737-67c3-492d-a196-5ddcda60cbd5",
+                    "path": "<XRController>{LeftHand}/{PrimaryTrigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ad759a31-3115-4d5b-8355-7c8ad61875b8",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -81,6 +92,17 @@
                     "name": "",
                     "id": "9588dc1e-daa3-4893-bc37-3f9d4e09bdd9",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4db0995-f42c-475a-a525-6de38baf9ea5",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
