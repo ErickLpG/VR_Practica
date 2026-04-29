@@ -69,7 +69,7 @@
                 {
                     "name": "",
                     "id": "e1eb9737-67c3-492d-a196-5ddcda60cbd5",
-                    "path": "<XRController>{LeftHand}/{PrimaryTrigger}",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -221,6 +221,61 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "608942fc-21ee-4307-99b8-fd8a9a230894",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "70921f2d-7c0d-4998-9200-9a1d4ae5b1c1",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>/thumbstick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "b969bb3d-b0f4-4c7c-b380-38d1ca3a8cd0",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>/thumbstick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "e56b7eda-5a93-4a1a-80bc-747863eac5e5",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>/thumbstick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "68d25cf0-c965-4f5e-bb87-028cb8e8021e",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>/thumbstick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "73102d09-ae49-4f11-bcbb-76fb19475a68",
                     "path": "<Keyboard>/leftArrow",
@@ -257,6 +312,28 @@
                     "name": "",
                     "id": "9da8647f-1f71-49da-b0de-592e54d462c8",
                     "path": "<Gamepad>/rightStick/right",
+                    "interactions": "",
+                    "processors": "Scale",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3aa1244-cc3d-4d73-823b-47ce8f7096d0",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>/thumbstick/left",
+                    "interactions": "",
+                    "processors": "Scale(factor=-1)",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ca617ed-a2d7-4fda-a311-8642e1425c79",
+                    "path": "<XRInputV1::Oculus::OculusTouchControllerOpenXR>/thumbstick/right",
                     "interactions": "",
                     "processors": "Scale",
                     "groups": "",
