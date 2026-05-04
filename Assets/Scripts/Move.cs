@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(CharacterController))]
 public class Move : MonoBehaviour
 {
     #region Variables
+
     [Header("Movimiento")]
     public float speed;
     public float runMultiplier;
@@ -19,9 +21,11 @@ public class Move : MonoBehaviour
     private PlayerInputAction inputActions;
     private Vector2 moveInput;
     private float rotateInput;
+
     #endregion
 
     #region Unity Methods
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -37,13 +41,17 @@ public class Move : MonoBehaviour
 
         inputActions.Player.Rotate.performed += ctx => rotateInput = ctx.ReadValue<float>();
         inputActions.Player.Rotate.canceled += ctx => rotateInput = 0f;
+
+        inputActions.Player.Reset.performed += ctx => ReiniciarEscena();
     }
 
-    private void OnEnable() {
+    private void OnEnable()
+    {
         inputActions.Enable();
     }
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         inputActions.Disable();
     }
 
@@ -51,13 +59,14 @@ public class Move : MonoBehaviour
     {
         isGrounded = characterController.isGrounded;
 
-        if( (isGrounded && velocity.y < 0) )
+        if(isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
         Vector3 move = new Vector3(moveInput.x, 0, moveInput.y);
         move = transform.TransformDirection(move);
+
         float currentSpeed = isRunning ? speed * runMultiplier : speed;
         characterController.Move(move * currentSpeed * Time.deltaTime);
 
@@ -67,9 +76,11 @@ public class Move : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
     }
+
     #endregion
 
     #region Move Methods
+
     private void Jump()
     {
         if(isGrounded)
@@ -77,5 +88,11 @@ public class Move : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
     }
+
+    public void ReiniciarEscena()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     #endregion
 }
